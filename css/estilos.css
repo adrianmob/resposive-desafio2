@@ -1,0 +1,47 @@
+.contenedor {
+    width: 1000px;
+    margin: 50px auto 0 auto;
+}
+
+.contImg {
+    margin-top: 100px;
+    border: 3px solid;
+    position: relative;
+}
+
+.loading {
+    position: absolute;
+    top: calc(50% - 40px);
+    left: calc(50% - 40px);
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    border: 5px solid rgb(210, 210, 210);
+    border-top: 5px solid rgba(84, 84, 84, 0.8);
+    border-radius: 100%;
+    animation-name: girar;
+    animation-duration: .7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+img {
+    width: 100%;
+    opacity: 0;
+    transform: scale(0);
+    transition: 1s;
+}
+
+.b-loaded {
+    opacity: 1;
+    transform: scale(1);
+}
+
+@keyframes girar {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
